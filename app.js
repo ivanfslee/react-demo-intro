@@ -1,10 +1,15 @@
+
+
 function App () {
+    let cards = data.map((course, i)=> {
+        return <Card key={i} data={course} />
+    })
+
+    console.log(cards);
+
     return (
         <div className="row">
-            <Card data={data[0]} />
-            <Card data={data[1]} />
-            <Card data={data[2]} />
-            <Card data={data[3]} />
+            {cards}
 
             {/* <Card course={data[0].course} instructor={data[0].instructor} image={data[0].image} />
             <Card course={data[1].course} instructor={data[1].instructor} image={data[1].image} />
